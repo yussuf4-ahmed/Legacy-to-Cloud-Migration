@@ -1,0 +1,34 @@
+name: 'dbt_pulsecore'
+version: '1.0.0'
+config-version: 2
+
+# This setting configures which "profile" dbt uses
+profile: 'dbt_pulsecore'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# Configuring models
+models:
+  dbt_pulsecore:
+    # SILVER LAYER: Staging models
+    # We use 'table' here because staging often involves heavy cleaning, 
+    # and physical tables are faster for downstream queries.
+    staging:
+      +schema: silver
+      +materialized: table 
+
+    # GOLD LAYER: Dimension and Fact models
+    # We use 'view' here as requested to save storage, 
+    # but I've added a sub-folder config just in case you expand later.
+    marts:
+      +schema: gold
+      +materialized: view
