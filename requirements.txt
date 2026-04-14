@@ -1,0 +1,13 @@
+# Database Connectors
+sqlalchemy==2.0.25
+psycopg2-binary==2.9.9
+snowflake-sqlalchemy==1.5.3
+snowflake-connector-python==3.7.0
+
+# Data Manipulation
+pandas==2.2.0
+python-dotenv==1.0.1
+
+# Transformation Layer
+dbt-core==1.7.10
+dbt-snowflake==1.7.3
