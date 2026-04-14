@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: stg_patients
+    columns:
+      - name: patient_id
+        tests:
+          - unique
+          - not_null
+      - name: insurance_plan
+        tests:
+          - accepted_values:
+              values: ['PLAN A', 'PLAN B', 'PLAN C', 'UNKNOWN']
