@@ -47,6 +47,7 @@ I engineered a robust end-to-end ELT (Extract, Load, Transform) pipeline to migr
 *[Insert your data modeling diagram image here]*
 
 ## Project Structure
+```
 legacy_to_snowflake_migration/
 ├── scripts/ # Extraction & Validation Layer
 │ ├── migrate_users.py # Postgres -> Snowflake Orchestrator
@@ -62,3 +63,4 @@ legacy_to_snowflake_migration/
 ├── .gitignore
 ├── requirement.txt # Environment dependencies
 └── README.md
+```
