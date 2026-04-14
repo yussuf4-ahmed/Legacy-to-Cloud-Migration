@@ -23,7 +23,7 @@ I engineered a robust end-to-end ELT (Extract, Load, Transform) pipeline to migr
 
 ### Data Architecture Diagram
 
-*[Insert your data architecture diagram image here]*
+![Data Modeling Diagram](docs//data-architecture.png)
 
 **Key Layers:**
 - **Bronze (Raw):** 1:1 copies of legacy tables (Patients, Doctors, Encounters, Facilities).
@@ -32,7 +32,7 @@ I engineered a robust end-to-end ELT (Extract, Load, Transform) pipeline to migr
 
 ### Data Flow Diagram
 
-*[Insert your data flow diagram image here]*
+![Data Modeling Diagram](docs/data-flow.png)
 
 ## Technical Breakdown
 
@@ -44,7 +44,7 @@ I engineered a robust end-to-end ELT (Extract, Load, Transform) pipeline to migr
 
 ### Data Modeling Diagram
 
-*[Insert your data modeling diagram image here]*
+![Data Modeling Diagram](docs/data-modeling.png)
 
 ## Project Structure
 ```
