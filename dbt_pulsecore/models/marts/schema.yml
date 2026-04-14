@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: dim_patients
+    columns:
+      - name: patient_key
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_encounters
+    columns:
+      - name: encounter_key
+        tests:
+          - unique
+          - not_null
+      - name: patient_key
+        tests:
+          - relationships:
+              field: patient_key # The field in dim_patients
+              to: ref('dim_patients')
