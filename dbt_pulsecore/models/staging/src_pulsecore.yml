@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: bronze
+    database: PULSECORE_ANALYTICS_DEV
+    schema: BRONZE
+    tables:
+      - name: patients
+      - name: encounters
+      - name: doctors
+      - name: facilities
